@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Blob Leilões</title>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/partials/page-header.css" />
+    <link rel="stylesheet" href="/styles/partials/cards.css" />
+    <link rel="stylesheet" href="/styles/partials/buttons.css" />
+    <link rel="stylesheet" href="/styles/partials/forms.css" />
+    <link rel="stylesheet" href="/styles/partials/modal.css" />
+    <link rel="stylesheet" href="/styles/partials/animations.css" />
+    <link rel="stylesheet" href="/styles/pages/announcement.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" src="./scripts/announcement-edit.js"></script>
+    
+  </head>
+  <body id="page-announcement-edit">
+    <header class="page-header inner">
+      <div class="container animate-up">
+        <a href="index.html" class="back">
+          <img src="./images/back.svg" alt="" />
+        </a>
+        <h1>Editar Anúncio</h1>
+      </div>
+    </header>
+
+    <div class="container flex animate-up delay-2">
+        <form id="form-announcement">
+          <fieldset>
+            <legend>Dados do Anúncio</legend>
+            <div class="separator light"></div>
+
+            <div class="input-wrapper">
+              <label for="name">Nome do Anúncio</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name"
+                value="Bicicleta Caloi Aro 23"
+              />
+            </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="date-announcement"
+                  >Até quando o anúncio <br />
+                  vai ficar ativo?</label
+                >
+                <input
+                  type="text"
+                  id="date-announcement"
+                  name="date-announcement"
+                  value="12/11/2023"
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="min-value"
+                  >Qual o lance mínimo<br />
+                  aceito para esse anúncio?</label
+                >
+                <input
+                  type="amount"
+                  id="min-value"
+                  name="min-value"
+                  placeholder="R$"
+                  value="2000"
+                />
+              </div>
+              
+            </div>
+            <br />
+            <div class="input-wrapper">
+              <label for="description-announcement">Descreva bem o item anunciado</label>
+              <input 
+              type="text" 
+              id="description-announcement" 
+              name="description-announcement"
+              value="Item em estado de Novo. Jaqueta overshirt de couro. O modelo, clássico e jovem apresenta detalhes como
+                pala western, bolsos frontais e botões personalizados e é ideal para quem procura
+                 estilo e conforto. Use com jeans e sapatênis para um visual cool!" />
+            </div>
+
+
+
+          </fieldset>
+    
+        </form>
+      </main>
+      <aside class="card">
+        <img src="./images/load-image.svg" alt="Carregar Imagem">
+        <p>
+          Preencha os dados ao lado<br/>  e insira 
+          uma imagem para realizar 
+          a alteração desejada.
+        </p>
+        <div class="button-group">
+          <button 
+            class="button green" 
+            id="salvar"
+            form="form-announcement" 
+            type="button" 
+            title="Salvar Dados">Salvar</button>
+          <a 
+            href="#" 
+            class="button gray open-modal"
+            >
+            <img 
+              src="./images/trash-24.svg" 
+              alt="Cancelar cadastro" 
+              title="Cancelar cadastro">
+          </a>
+        </div>
+      </aside>
+      
+    </div>
+    <!-- end container -->
+
+    <div class="modal-wrapper">
+      <div class="modal">
+        <img src="./images/trash-48.svg" alt="Excluir Anúncio" title="Excluir Anúncio" />
+        <h3>Excluir Anúncio</h3>
+        <p>Quer mesmo excluir esse Anúncio? <br/>
+        Ele será apagado para sempre.  
+        <p>
+        <footer>
+          <a 
+            class="button gray" 
+            href="#">Cancelar</a>
+          <button
+            class="button red"
+            type="submit"
+            form="delete-announcement">Excluir</button>
+        </footer>
+      </div>
+      <form 
+        method="post" 
+        action="/announcement/delete/{announcementid}" 
+        id="delete-announcement"></form>
+    </div>
+    <!-- end modal-wrapper -->
+  </body>
+</html>
+ 

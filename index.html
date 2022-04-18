@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Blob Leilões</title>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/partials/page-header.css" />
+    <link rel="stylesheet" href="/styles/partials/cards.css" />
+    <link rel="stylesheet" href="/styles/partials/buttons.css" />
+    <link rel="stylesheet" href="/styles/partials/modal.css" />
+    <link rel="stylesheet" href="/styles/partials/animations.css" />
+    <link rel="stylesheet" href="/styles/pages/index.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <script src="scripts/index.js" defer type="module"></script>
+  </head>
+  <body id="page-index">
+    <header class="page-header">
+      <div class="container">
+        <section id="top" class="animate-up">
+          <h2 class="sr-only">Homepage</h2>
+          <img id="logo" src="./images/logo.svg" alt="Logo" />
+          <span id="notification">
+            <img src="./images/alert-octagon.svg" alt="Alerta" />
+            Você não está logado! Realize o seu login ao lado para ver seus anúncios!
+          </span>
+          <a href="login.html" id="avatar-profile">
+            <p>Login <span>Ver perfil</span></p>
+            <img src="./images/fechadura.png" />
+          </a>
+        </section>
+
+        <div class="separator"></div>
+
+        <section id="summary" class="animate-up delay-1">
+          <h2 class="sr-only">Sumário</h2>
+
+
+          <span class="button orange">
+            <span>
+              <img src="./images/plus-24.svg" alt="busca" />
+            </span>
+            
+            <div class="topnav">       
+              <input type="text" placeholder="Busque anúncios..">
+            </div>
+          </span>
+
+
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <main class="animate-up delay-2">
+        <h1 class="sr-only">Anúncios</h1>
+
+        <div class="cards">
+          <div class="card progress" data-id="1">
+            <div class="id column">1</div>
+            <div class="name column">Bicicleta Caloi Aro 23</div>
+            <div class="deadline column">
+              <span>Prazo</span>
+              <p>3 dias para encerrar</p>
+            </div>
+            <div class="amount column">
+              <span>Lance Atual</span>
+              <p>R$ 4500,00</p>
+            </div>
+            <div class="status badge column">Em andamento</div>
+            <div class="actions column flex">
+              <p class="sr-only">Ações</p>
+              <a
+                href="auction.html"
+                class="button white edit"
+                title="Realizar Lance"
+              >
+                <img src="./images/auction.svg" alt="Lance" />
+              </a>
+
+            </div>
+          </div>
+          <!-- end card -->
+
+          <div class="card done" data-id="2">
+            <div class="id column">2</div>
+            <div class="name column">Jaqueta Couro Aramis</div>
+            <div class="deadline column">
+              <span>Prazo</span>
+              <p>3 dias para encerrar</p>
+            </div>
+            <div class="amount column">
+              <span>Lance Atual</span>
+              <p>R$ 4500,00</p>
+            </div>
+            <div class="status badge column">Encerrado</div>
+            <div class="actions column flex">
+              <p class="sr-only">Ações</p>
+              <a
+                href="auction.html"
+                class="button white edit"
+                title="Realizar Lance"
+              >
+                <img src="./images/auction.svg" alt="Lance" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- end cards -->
+      </main>
+    </div>
+    <!-- end container -->
+
+    <div class="modal-wrapper">
+      <div class="modal">
+        <img
+          src="./images/trash-48.svg"
+          alt="Excluir Anúncio"
+          title="Excluir Anúncio"
+        />
+        <h3>Excluir Anúncio</h3>
+        <p>
+          Quer mesmo excluir esse Anúncio? <br />
+          Ele será apagado para sempre.
+        </p>
+
+        <p></p>
+        <footer>
+          <a class="button gray" href="#">Cancelar</a>
+          <button class="button red" type="submit" form="delete-announcement">
+            Excluir Anúncio
+          </button>
+        </footer>
+      </div>
+      <form
+        method="post"
+        action="/announcement/delete"
+        id="delete-announcement"
+      ></form>
+    </div>
+    <!-- end modal-wrapper -->
+  </body>
+</html>

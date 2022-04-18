@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Blob Leilões</title>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/partials/page-header.css" />
+    <link rel="stylesheet" href="/styles/partials/cards.css" />
+    <link rel="stylesheet" href="/styles/partials/buttons.css" />
+    <link rel="stylesheet" href="/styles/partials/forms.css" />
+    <link rel="stylesheet" href="/styles/partials/animations.css" />
+    <link rel="stylesheet" href="/styles/pages/profile.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" src="./scripts/profile.js"></script>
+  
+  </head>
+  <body id="page-profile">
+    <header class="page-header inner">
+      <div class="container animate-up">
+        <a href="index.html" class="back">
+          <img src="./images/back.svg" alt="" />
+        </a>
+        <h1>Meu Perfil</h1>
+      </div>
+    </header>
+
+    <div class="container animate-up delay-2">
+      <aside class="card">
+        <img
+          src="https://avatars.githubusercontent.com/u/30447351?v=4"
+          alt="Tamer"
+        />
+        <h2>Tamer</h2>
+        <p>
+          Crédito disponível: <br />
+          <strong>R$ 75,00</strong>
+        </p>
+        <button class="button green" 
+        form="form-profile" 
+        id="salvar"
+        onclick="enviaMsg()"
+        type="button">
+          Salvar dados
+        </button>
+      </aside>
+      <main>
+        <form id="form-profile">
+          <fieldset>
+            <legend>Dados do perfil</legend>
+            <div class="separator light"></div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="name">Nome</label>
+                <input type="text"
+                id="name"
+                name="name"
+                size="25"
+                value="Tamer" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="avatar">Link da foto</label>
+                <input
+                  placeholder="https://"
+                  type="url"
+                  id="avatar"
+                  name="avatar"
+                  size="25"
+                  value="https://avatars.githubusercontent.com/u/30447351?v=4"/>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço</legend>
+            <div class="separator light"></div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="cep">CEP</label>
+                <input
+                  type="text"
+                  id="cep"
+                  name="cep" 
+                  size="15"
+                  value="01133-000" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="address">Logradouro</label>
+                <input type="text"
+                id="address"
+                name="address" 
+                size="36"
+                value="Av. Rudge" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="address-number">Número</label>
+                <input type="number" 
+                id="address-number"
+                name="address-number"
+                size="25"
+                value="315" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="complement">Complemento</label>
+                <input
+                  type="text"
+                  id="complement"
+                  name="complement"
+                  size="25"
+                  value="Bom Retiro" />
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+    <!-- end container -->
+  </body>
+</html>

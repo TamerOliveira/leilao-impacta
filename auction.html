@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Blob Leilões</title>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/partials/page-header.css" />
+    <link rel="stylesheet" href="/styles/partials/cards.css" />
+    <link rel="stylesheet" href="/styles/partials/buttons.css" />
+    <link rel="stylesheet" href="/styles/partials/forms.css" />
+    <link rel="stylesheet" href="/styles/partials/modal.css" />
+    <link rel="stylesheet" href="/styles/partials/animations.css" />
+    <link rel="stylesheet" href="/styles/pages/announcement.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" src="./scripts/auction.js"></script>
+    
+  </head>
+  <body id="page-announcement-edit">
+    <header class="page-header inner">
+      <div class="container animate-up">
+        <a href="index.html" class="back">
+          <img src="./images/back.svg" alt="" />
+        </a>
+        <h1>Dar um Lance!</h1>
+      </div>
+    </header>
+
+    <div class="container flex animate-up delay-2">
+        <form id="form-announcement">
+          <fieldset>
+            <legend>Dados do Anúncio</legend>
+            <div class="separator light"></div>
+
+            <div class="input-wrapper">
+              <label for="name">Nome do Anúncio</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name"
+                value="Bicicleta Caloi Aro 23"
+                disabled
+              />
+            </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="date-announcement"
+                  >Tempo até o anúncio <br />
+                  se encerrar</label
+                >
+                <input
+                  type="text"
+                  id="date-announcement"
+                  name="date-announcement"
+                  value="2 dias - 04 Horas 02 Minutos"
+                  disabled
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="min-value"
+                  >Lance atual realizado por:<br />
+                  <strong>Tamer</strong>, no valor de:</label
+                >
+                <input
+                  type="amount"
+                  id="min-value"
+                  name="min-value"
+                  placeholder="R$"
+                  value="2000"
+                  disabled
+                />
+              </div>
+              
+            </div>
+            <br />
+            <div class="input-wrapper">
+              <label for="description-announcement">Descrição do Item</label>
+              <input 
+              type="text" 
+              id="description-announcement" 
+              name="description-announcement"
+              value="Item em estado de Novo. Jaqueta overshirt de couro. O modelo, clássico e jovem apresenta detalhes como
+                pala western, bolsos frontais e botões personalizados e é ideal para quem procura
+                 estilo e conforto. Use com jeans e sapatênis para um visual cool!"
+                 disabled />
+                 
+            </div>
+
+
+
+          </fieldset>
+    
+        </form>
+      </main>
+
+      <aside class="card">
+        <img src="./images/load-image.svg" alt="Carregar Imagem">
+        <p>
+   
+          
+
+          <div class="container flex animate-up delay-2">
+            <form id="auction-form">
+              <fieldset>
+    
+                <div class="input-wrapper">
+                  <p>Não perca tempo! </br>Realize o seu lance agora mesmo!</p>
+                  <p>Código do Anúncio:
+                  <input 
+                    type="amount" 
+                    id="id-announcement" 
+                    size="5"
+                    name="id-announcement"
+                    type="amount"
+                    placeholder="R$"
+                    value="634235"
+                    disabled
+                  /></p>
+                  <p>Valor do Lance:
+                  <input 
+                    type="amount" 
+                    id="valor" 
+                    size="5"
+                    name="valor"
+                    type="amount"
+                    placeholder="R$"
+                  /></p>
+                </div>
+              </fieldset>
+        
+            </form>
+          </main>
+        </div>
+
+        </p>
+        <div class="button-group">
+          <button
+          class="button green"
+          id="salvar"
+          form="auction-form"
+          type="button"
+          title="Salvar Dados"
+          onclick="enviaMsg()"
+        >
+          Efetivar
+        </button>
+          <a 
+            href="#" 
+            class="button gray"
+            >
+            <img 
+              src="./images/trash-24.svg" 
+              alt="Cancelar cadastro" 
+              title="Cancelar cadastro">
+          </a>
+        </div>
+      </aside>
+      
+    </div>
+    <!-- end container -->
+
+
+    <!-- end modal-wrapper -->
+  </body>
+</html>
+ 

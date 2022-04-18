@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+  <title>Blob - Leilões Online</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+  <link rel="stylesheet" href="./styles/partials/login.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h2>Blob - Leilões Online</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Crie sua Conta</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>ou use seu e-mail para se registrar</span>
+			<input type="text" placeholder="Nome" />
+			<input type="email" placeholder="E-mail" />
+			<input type="password" placeholder="Senha" />
+			<button>Inscrever-se</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="./index.html">
+			<h1>Conecte-se</h1>
+			<div class="social-container">
+				<a href="./index.html" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="./index.html" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="./index.html" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>ou use sua conta</span>
+			<input type="email" placeholder="E-mail" />
+			<input type="password" placeholder="Senha" />
+			<a href="./index.html">Esqueceu sua senha?</a>
+			<button>Login</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bem Vindo!</h1>
+				<p>Para se conectar, faça login com suas informações pessoais</p>
+				<button class="ghost" id="signIn">Login</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Bem Vindo!</h1>
+				<p>Ainda não tem cadastro? Insira seus dados e começe agora mesmo!</p>
+				<button class="ghost" id="signUp">Inscrever-se</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- partial -->
+  <script  src="./scripts/login.js"></script>
+
+</body>
+</html>
