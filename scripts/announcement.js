@@ -24,7 +24,7 @@ function enviaMsg() {
     "min-value":document.getElementById("min-value").value,
     "description-announcement":document.getElementById("description-announcement").value};
     var jsondata = JSON.stringify(data);
-    var url = "https://x80pqzcwu8.execute-api.us-east-1.amazonaws.com/UAT-announcement";
+    var url = "https://0sqr28ipe2.execute-api.us-east-1.amazonaws.com/announcement_post";
     xhttp.open("POST", url);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8", "Access-Control-Allow-Methods", "header('Access-Control-Allow-Methods");
     xhttp.send(jsondata);

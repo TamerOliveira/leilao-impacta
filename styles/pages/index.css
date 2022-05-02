@@ -166,7 +166,7 @@ main {
 /* -------------------------------------------------- */
 .card {
   display: grid;
-  grid-template-columns: 5% 35% 20% 15% 15% 10%;
+  grid-template-columns: 10% 30% 20% 15% 15% 10%;
   align-items: center;
 
   margin-bottom:  0.5rem;

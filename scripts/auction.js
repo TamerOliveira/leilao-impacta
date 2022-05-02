@@ -19,10 +19,12 @@ function enviaMsg() {
   
     alert("mensagem enviada");
     var data = {
-    "id-announcement":document.getElementById("id-announcement").value,
-    "valor":document.getElementById("valor").value};
+    "id_announcement":document.getElementById("id-announcement").value,
+    "generator":"j1wtde_9",
+    "bid_value":document.getElementById("valor").value};
+  
     var jsondata = JSON.stringify(data);
-    var url = "https://8lgilyyfp0.execute-api.us-east-1.amazonaws.com/UAT-auction";
+    var url = "https://23wqqzwvpf.execute-api.us-east-1.amazonaws.com/bid_auction_post";
     xhttp.open("POST", url);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8", "Access-Control-Allow-Methods", "header('Access-Control-Allow-Methods");
     xhttp.send(jsondata);

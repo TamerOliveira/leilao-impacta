@@ -22,7 +22,6 @@
       rel="stylesheet"
     />
 
-
     <script src="scripts/index.js" defer type="module"></script>
   </head>
   <body id="page-index">
@@ -33,11 +32,11 @@
           <img id="logo" src="./images/logo.svg" alt="Logo" />
           <span id="notification">
             <img src="./images/alert-octagon.svg" alt="Alerta" />
-            Você não está logado! Realize o seu login ao lado para ver seus anúncios!
+            Você tem 2 aprovações pendentes
           </span>
-          <a href="login.html" id="avatar-profile">
-            <p>Login <span>Ver perfil</span></p>
-            <img src="./images/fechadura.png" />
+          <a href="profile.html" id="avatar-profile">
+            <p>Tamer <span>Ver perfil</span></p>
+            <img src="https://avatars.githubusercontent.com/u/30447351?v=4" />
           </a>
         </section>
 
@@ -46,18 +45,26 @@
         <section id="summary" class="animate-up delay-1">
           <h2 class="sr-only">Sumário</h2>
 
-
-          <span class="button orange">
-            <span>
-              <img src="./images/plus-24.svg" alt="busca" />
-            </span>
-            
-            <div class="topnav">       
-              <input type="text" placeholder="Busque anúncios..">
+          <div class="info">
+            <div class="total">
+              <strong>12</strong>
+              Leilões ativos
             </div>
-          </span>
-
-
+            <div class="in-progress">
+              <strong>7</strong>
+              Em andamento
+            </div>
+            <div class="finished">
+              <strong>4</strong>
+              Encerrados
+            </div>
+          </div>
+          <a class="button orange" href="announcement.html">
+            <span>
+              <img src="./images/plus-24.svg" alt="Novo Anúncio" />
+            </span>
+            Adicionar novo anúncio
+          </a>
         </section>
       </div>
     </header>
@@ -68,27 +75,29 @@
 
         <div class="cards">
           <div class="card progress" data-id="1">
-            <div class="id column">1</div>
+            <div class="id column">2gdTnz8L</div>
             <div class="name column">Bicicleta Caloi Aro 23</div>
             <div class="deadline column">
               <span>Prazo</span>
               <p>3 dias para encerrar</p>
             </div>
             <div class="amount column">
-              <span>Lance Atual</span>
+              <span>Lance Inicial</span>
               <p>R$ 4500,00</p>
             </div>
             <div class="status badge column">Em andamento</div>
             <div class="actions column flex">
               <p class="sr-only">Ações</p>
               <a
-                href="auction.html"
+                href="announcement-edit.html"
                 class="button white edit"
-                title="Realizar Lance"
+                title="Editar Anúncio"
               >
-                <img src="./images/auction.svg" alt="Lance" />
+                <img src="./images/edit-24.svg" alt="Editar Anúncio" />
               </a>
-
+              <button class="delete button white" title="Excluir Anúncio">
+                <img src="./images/trash-24.svg" alt="Excluir Anúncio" />
+              </button>
             </div>
           </div>
           <!-- end card -->
@@ -101,23 +110,28 @@
               <p>3 dias para encerrar</p>
             </div>
             <div class="amount column">
-              <span>Lance Atual</span>
+              <span>Lance Inicial</span>
               <p>R$ 4500,00</p>
             </div>
             <div class="status badge column">Encerrado</div>
             <div class="actions column flex">
               <p class="sr-only">Ações</p>
               <a
-                href="auction.html"
+                href="announcement-edit.html"
                 class="button white edit"
-                title="Realizar Lance"
+                title="Editar Anúncio"
               >
-                <img src="./images/auction.svg" alt="Lance" />
+                <img src="./images/edit-24.svg" alt="Editar Anúncio" />
               </a>
+              <button class="delete button white" title="Excluir Anúncio">
+                <img src="./images/trash-24.svg" alt="Excluir Anúncio" />
+              </button>
             </div>
           </div>
         </div>
         <!-- end cards -->
+
+        
       </main>
     </div>
     <!-- end container -->
