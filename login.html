@@ -13,7 +13,7 @@
 <h2>Blob - Leilões Online</h2>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form id="register" action="#">
 			<h1>Crie sua Conta</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -21,14 +21,19 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>ou use seu e-mail para se registrar</span>
-			<input type="text" placeholder="Nome" />
-			<input type="email" placeholder="E-mail" />
-			<input type="password" placeholder="Senha" />
-			<button>Inscrever-se</button>
+			<input id="nome" type="text" placeholder="Nome" />
+			<input id="email" type="email" placeholder="E-mail" />
+			<input id="password" type="password" placeholder="Senha" />
+			<button
+			id="create"
+            form="register"
+            type="button"
+            title="Registrar"
+            onclick="createUser()">Inscrever-se</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="./index.html">
+		<form id="flogin" action="./index.html">
 			<h1>Conecte-se</h1>
 			<div class="social-container">
 				<a href="./index.html" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -36,10 +41,15 @@
 				<a href="./index.html" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>ou use sua conta</span>
-			<input type="email" placeholder="E-mail" />
-			<input type="password" placeholder="Senha" />
+			<input id="lemail" type="email" placeholder="E-mail" />
+			<input id="lpassword" type="password" placeholder="Senha" />
 			<a href="./index.html">Esqueceu sua senha?</a>
-			<button>Login</button>
+			<button
+			id="login"
+            form="flogin"
+            type="button"
+            title="Login"
+            onclick="login()">Login</button>
 		</form>
 	</div>
 	<div class="overlay-container">
